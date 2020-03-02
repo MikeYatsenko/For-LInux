@@ -1,0 +1,9 @@
+<h1>Jopa</h1>
+{% for url in url_list%}
+<ul>
+<li>{{url.site_url}}</li>
+ <form method="get" action="{% url 'url_confirm_delete' pk=url.pk%}">
+<button type="submit" class="btn btn-primary">Удалить</button>
+ </form>
+</ul>
+{% endfor %}
